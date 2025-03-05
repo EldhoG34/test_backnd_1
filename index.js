@@ -11,7 +11,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-  origin: ["http://localhost:5173", "https://frontend-part-1-74bvciivh-eldhos-projects-bf14323d.vercel.app/"],
+  origin: ["http://localhost:5173", "https://frontend-part-1-74bvciivh-eldhos-projects-bf14323d.vercel.app"],
   methods: ["GET", "POST"]
 }
 
