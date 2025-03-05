@@ -7,6 +7,9 @@ import { promises as fsPromises } from 'fs';
 import { join, normalize, basename } from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { exec } from 'child_process';
+import { WebSocketServer } from 'ws';
+// Instead of importing from y-websocket (which now fails), create or vendor your own setupWSConnection helper.
+import { setupWSConnection } from './setupWSConnection.js'; 
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
@@ -332,7 +335,12 @@ socket.emit('file-updated', structure);
     });
   });
 });
+const yjsPath = '/yjs';
+const wss = new WebSocketServer({ server: httpServer, path: yjsPath });
 
+wss.on('connection', (ws, req) => {
+  setupWSConnection(ws, req);
+});
 const PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, () => {
   console.log(`[server] Server running on port ${PORT}`);
