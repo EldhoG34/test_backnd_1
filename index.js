@@ -9,7 +9,7 @@ import { createClient } from '@supabase/supabase-js';
 import { exec } from 'child_process';
 import { WebSocketServer } from 'ws';
 // Instead of importing from y-websocket (which now fails), create or vendor your own setupWSConnection helper.
-import setupWSConnection from '../setupWSConnection.js';
+import setupWSConnection from 'setupWSConnection.js';
 
 const app = express();
 const httpServer = createServer(app);
