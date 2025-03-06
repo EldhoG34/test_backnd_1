@@ -20,3 +20,4 @@ export const setupWSConnection = (ws, req) => {
   // Optionally, send an initial message to the client
   ws.send('Connected to Yjs WebSocket server');
 };
+export default setupWSConnection;
