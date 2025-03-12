@@ -20,10 +20,7 @@ const io = new Server(httpServer, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://frontend-part-1-74bvciivh-eldhos-projects-bf14323d.vercel.app",
-      "https://frontend-part-1-gkt6lqqo9-eldhos-projects-bf14323d.vercel.app",
-      "https://frontend-part-1-5gytxuo7r-eldhos-projects-bf14323d.vercel.app",
-      "https://frontend-part-1-7fbdc4aqc-eldhos-projects-bf14323d.vercel.app"
+      "https://frontend-part-1-qmui1s5e8-eldhos-projects-bf14323d.vercel.app"
     ],
     methods: ["GET", "POST"]
   },
