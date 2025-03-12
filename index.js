@@ -1,4 +1,4 @@
-import express from 'express';
+  import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
@@ -27,6 +27,7 @@ const io = new Server(httpServer, {
     ],
     methods: ["GET", "POST"]
   }
+    perMessageDeflate: false, 
 });
 console.log('[DEBUG] Socket.IO server initialized with CORS settings.');
 
