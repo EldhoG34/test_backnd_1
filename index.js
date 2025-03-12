@@ -26,7 +26,7 @@ const io = new Server(httpServer, {
       "https://frontend-part-1-7fbdc4aqc-eldhos-projects-bf14323d.vercel.app"
     ],
     methods: ["GET", "POST"]
-  }
+  },
     perMessageDeflate: false, 
 });
 console.log('[DEBUG] Socket.IO server initialized with CORS settings.');
